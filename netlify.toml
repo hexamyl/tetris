@@ -2,15 +2,14 @@
   publish = "webgame"
   command = "cd server && npm ci && cd .. && npm run build"  # adjust npm run build to your actual build step
   publish = "webgame"
-  functions = "server"
 
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/server/:splat"
   status = 200
 
-[functions]
-  directory = "server"
-
 [[plugins]]
 package = "@netlify/plugin-functions-install-core"
+
+[functions]
+  directory = "server"
