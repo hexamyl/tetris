@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tetris</h1>
+    <div class="container">
+        <canvas id="tetris" width="480" height="800"></canvas>
+        <div>
+            <h2>Score: <span id="score">0</span></h2>
+            <p>Next Piece</p>
+            <canvas id="next-piece" width="160" height="160"></canvas><br>
+            <button id="new-game">New Game</button>
+        </div>
+        <div class="side-panel">
+
+            <h2>Your High Score: <span id="highscore">0</span></h2>
+            <div id="leaderboard">
+                <h2>Leaderboard</h2>
+                <ol id="leaderboard-list"></ol>
+            </div>
+            <div class="controls">
+                <h2>Controls</h2>
+                <p>Left/Right Arrows: Move</p>
+                <p>Down Arrow: Drop</p>
+                <p>Q/W: Rotate</p>
+            </div>
+            <div class="rules">
+                <h2>Rules</h2>
+                <p>Clear lines to score points.<br> The game is over when the pieces reach the top of the screen.</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('highscore').innerText = localStorage.getItem('highscore') || 0;
+        document.getElementById('new-game').addEventListener('click', () => {
+            location.reload();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+    background: #202028;
+    color: #fff;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.container {
+    display: flex;
+    gap: 2rem;
+}
+
+canvas {
+    border: 4px solid #fff;
+    border-radius: 5px;
+    background: #000;
+}
+
+#tetris {
+    width: 480px;
+    height: 800px;
+}
+
+#next-piece {
+    width: 160px;
+    height: 160px;
+}
+
+.side-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#score, #highscore {
+    font-size: 1.5rem;
+    color: #fefefe;
+}
+
+button {
+    background: #4f4f4f;
+    border: none;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #6f6f6f;
+}
+
+.controls, .rules {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.controls h2, .rules h2 {
+    margin-bottom: 1rem;
+}
+
+.controls p, .rules p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #ccc;
+}
