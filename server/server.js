@@ -1,9 +1,10 @@
 const express = require('express');
 const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
+const path = require('path');
 const serverless = require('serverless-http');
 
-const adapter = new FileSync('/tmp/db.json');
+const adapter = new FileSync('/tmp/db.json'); // Use /tmp for serverless environment
 const db = low(adapter);
 
 // Set some defaults
