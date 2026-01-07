@@ -2,7 +2,6 @@
   publish = "webgame"
   command = "cd server && npm ci && cd .. && npm run build"
   publish = "webgame"
-  functions = "server"
 
 [[redirects]]
   from = "/api/*"
