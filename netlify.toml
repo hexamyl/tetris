@@ -1,6 +1,8 @@
 [build]
   publish = "webgame"
-  command = ""
+  command = "cd server && npm ci && cd .. && npm run build"  # adjust npm run build to your actual build step
+  publish = "webgame"
+  functions = "server"
 
 [[redirects]]
   from = "/api/*"
@@ -9,3 +11,6 @@
 
 [functions]
   directory = "server"
+
+[[plugins]]
+package = "@netlify/plugin-functions-install-core"
